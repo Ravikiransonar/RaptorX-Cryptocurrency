@@ -1,0 +1,77 @@
+.chart-container {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.chart-container.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.chart-container.dark {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.chart-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.chart-buttons button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.chart-buttons button:hover {
+  background-color: #45a049;
+}
+
+.chart-buttons button:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 767px) {
+  .chart-buttons {
+    flex-direction: column;
+  }
+
+  .chart-buttons button {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .chart-container {
+    margin: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .chart-buttons {
+    flex-direction: row;
+  }
+
+  .chart-buttons button {
+    width: auto;
+  }
+
+  .chart-container {
+    margin: 20px;
+  }
+}

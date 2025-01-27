@@ -1,0 +1,231 @@
+/* General Table Container Styling */
+.table-container {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  position: relative;
+}
+
+/* Light Mode */
+.table-container.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Dark Mode */
+.table-container.dark {
+  background-color: #1e1e1e; /* Darker background for better contrast */
+  color: #e0e0e0; /* Lighter text for readability */
+}
+
+/* Column Selector Styling */
+.column-selector {
+  position: relative;
+  display: inline-block;
+}
+
+.column-selector button {
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.column-selector button:hover {
+  background-color: var(--button-hover-background-color);
+}
+
+.column-selector-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.column-selector.show .column-selector-content {
+  display: block;
+}
+
+.column-selector label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: var(--text-color);
+}
+
+.column-selector input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+/* Light theme */
+:root {
+  --background-color: #fff;
+  --border-color: #ccc;
+  --text-color: #000;
+  --button-background-color: #4CAF50;
+  --button-text-color: #fff;
+  --button-hover-background-color: #45a049;
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+  --background-color: #333;
+  --border-color: #555;
+  --text-color: #fff;
+  --button-background-color: #4CAF50;
+  --button-text-color: #fff;
+  --button-hover-background-color: #45a049;
+}
+
+/* Styled Table */
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 16px;
+  text-align: left;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+  background-color: #4caf50; /* Consistent header color */
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+  transition: background-color 0.3s ease;
+}
+
+/* Light Mode Rows */
+.table-container.light .styled-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.table-container.light .styled-table tbody tr:nth-of-type(odd) {
+  background-color: #ffffff;
+}
+
+.table-container.light .styled-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Dark Mode Rows */
+.table-container.dark .styled-table tbody tr:nth-of-type(even) {
+  background-color: #2a2a2a; /* Lighter shade for even rows */
+}
+
+.table-container.dark .styled-table tbody tr:nth-of-type(odd) {
+  background-color: #242424; /* Slightly darker for contrast */
+}
+
+.table-container.dark .styled-table tbody tr:hover {
+  background-color: #333333; /* Hover state with more contrast */
+}
+
+.styled-table tbody tr.active-row {
+  font-weight: bold;
+  color: #4caf50; /* Highlight active row */
+}
+
+/* Pagination Styling */
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pagination button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination button:hover:not(:disabled) {
+  background-color: #45a049;
+}
+
+.pagination button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.pagination input,
+.pagination select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #dddddd;
+  transition: border-color 0.3s ease;
+}
+
+.pagination input:focus,
+.pagination select:focus {
+  border-color: #4caf50;
+}
+
+/* Responsive Styling */
+@media (max-width: 767px) {
+  .table th,
+  .table td {
+    padding: 10px;
+  }
+
+  .table-container {
+    margin: 10px 0;
+  }
+
+  .pagination {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .pagination button,
+  .pagination input,
+  .pagination select {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (min-width: 768px) {
+  .table th,
+  .table td {
+    padding: 15px;
+  }
+
+  .table-container {
+    margin: 20px 0;
+  }
+
+  .pagination {
+    flex-direction: row;
+    gap: 0;
+  }
+
+  .pagination button,
+  .pagination input,
+  .pagination select {
+    width: auto;
+  }
+}

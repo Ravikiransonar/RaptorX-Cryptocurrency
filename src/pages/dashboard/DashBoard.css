@@ -1,0 +1,232 @@
+/* Light Theme */
+.light {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  /* Dark Theme */
+  .dark {
+    background-color: #333333;
+    color: #ffffff;
+  }
+  
+  /* Dashboard Container */
+  .dashboard-container {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Card Container */
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  /* Card */
+  .card {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 300px;
+  }
+  
+  .card.light {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  .card.dark {
+    background-color: #444444;
+    color: #ffffff;
+  }
+  
+  /* Card Header */
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .card h2 {
+    margin: 0;
+    font-size: 24px;
+    color: inherit;
+  }
+  
+  /* Coin Details */
+  .coin {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .coin:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .coin img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  
+  .coin-details {
+    text-align: left;
+  }
+  
+  .coin h3 {
+    margin: 0;
+    font-size: 18px;
+    color: inherit;
+  }
+  
+  .coin p {
+    margin: 0;
+    font-size: 14px;
+    color: inherit;
+  }
+  
+  /* Button */
+  button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  .add-card-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .add-card-dropdown.light .dropdown-content {
+    background-color: #f9f9f9;
+    color: #000000;
+  }
+  
+  .add-card-dropdown.dark .dropdown-content {
+    background-color: #444444;
+    color: #ffffff;
+  }
+  
+  .add-card-button {
+    margin-bottom: 20px;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .add-card-dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown-content button {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    text-align: left;
+    border: none;
+  }
+  
+  .dropdown-content button:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .remove-card-button {
+    background-color: #ff4d4d;
+  }
+  
+  .remove-card-button:hover {
+    background-color: #ff1a1a;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 767px) {
+    .cards-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .card {
+      width: 100%;
+      max-width: 400px;
+    }
+  }
+  .theme-toggle-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: inherit;
+    margin-bottom: 20px;
+  }
+  
+  .theme-toggle-button:focus {
+    outline: none;
+  }
+  
+  .dashboard-title {
+    font-size: 3.5rem; /* Increased font size */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 15px; /* Added padding for better spacing */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow for depth */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+  }
+  
+  /* Light Theme */
+  .light .dashboard-title {
+    color: #333333; /* Font color for light theme */
+    background-color: #f0f0f0; /* Background color for light theme */
+  }
+  
+  .light .dashboard-title:hover {
+    background-color: #e0e0e0; /* Change background color on hover for light theme */
+  }
+  
+  /* Dark Theme */
+  .dark .dashboard-title {
+    color: #ffffff; /* Font color for dark theme */
+    background-color: #1e1e1e; /* Background color for dark theme */
+  }
+  
+  .dark .dashboard-title:hover {
+    background-color: #444444; /* Change background color on hover for dark theme */
+  }
+  
+  @media (min-width: 768px) {
+    .cards-container {
+      flex-direction: row;
+    }
+  
+    .card {
+      width: 300px;
+    }
+  }
