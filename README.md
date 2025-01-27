@@ -5,9 +5,44 @@
 
 RaptorX is a React-based web application that provides real-time cryptocurrency market data. It features a dashboard with various components such as cards and tables to display top gainers, top losers, and detailed coin information. The application uses context for state management and Axios for data fetching.
 
+![dashboard details image](Dashboard.png)
+![alt text](Coins.png)
+
+# Website UI Features
+
+This document outlines the key features of the website UI, as illustrated in the provided screenshot with marked points from 1 to 8.
+
+## Features
+
+### 1. Dark Mode/Light Mode Toggle
+- The website allows users to switch between dark mode and light mode for a personalized viewing experience.
+
+### 2. Add and Remove Cards
+- **Add Card Button**: Adds a new card to the UI.
+- **Remove Cards**: Cards can be removed by clicking the cross button on them.
+- **Draggable and Droppable**: Cards can be rearranged using drag-and-drop functionality.
+
+### 3. Column Selector
+- Users can choose specific columns to display in the table, providing flexibility in how data is presented.
+
+### 4. Search Bar
+- A search bar is available to quickly find specific coins in the table based on their names or other attributes.
+
+### 5. Sorting
+- Users can sort the table data in ascending or descending order by clicking on the sort button.
+
+### 6. Draggable and Droppable Cards
+- Cards can be rearranged using drag-and-drop functionality by simply clicking and holding the card.
+
+### 7. Detailed View for Table Rows
+- Clicking on a particular table row navigates to a detailed view of the selected coin, providing more information.
+
+### 8. Rows Per Page Selector
+- Users can select the number of rows to display in the table, choosing from options like 10, 20, 30, or 100 rows per page.
+
 ---
 
-## Setup Instructions
+
 
 ### Prerequisites
 
@@ -136,3 +171,5 @@ The application configuration is stored in `config.json`, which includes the API
 ## Conclusion
 
 RaptorX is a robust and scalable application for monitoring cryptocurrency markets. With its modular component structure, efficient state management, and responsive design, it provides a seamless user experience for both desktop and mobile users.
+
+
