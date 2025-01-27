@@ -135,4 +135,4 @@ The application configuration is stored in `config.json`, which includes the API
 
 ## Conclusion
 
-RaptorX is a robust and scalable application for monitoring cryptocurrency markets. With its modular component structure, efficient state management, and responsive design, it provides a seamless user experience for both desktop and mobile users
+RaptorX is a robust and scalable application for monitoring cryptocurrency markets. With its modular component structure, efficient state management, and responsive design, it provides a seamless user experience for both desktop and mobile users.
